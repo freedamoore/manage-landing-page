@@ -4,7 +4,7 @@
   --color-neutral-1: hsl(227, 12%, 61%); /*Dark Grayish Blue*/
   --color-neutral-2: hsl(233, 12%, 13%); /*Very Dark Blue*/
   --color-neutral-3: hsl(13, 100%, 96%); /*Very Pale Red*/
-  --color-neutral-4: hsl(0, 0%, 98%); /*Vary Light Gray*/
+  --color-neutral-4: hsl(0, 0%, 98%); /*Very Light Gray*/
 
   --margin-sm: 2rem;
   --margin-md: 3rem;
@@ -29,5 +29,157 @@ body {
   font-size: 1.6rem; /* 16px; */
   color: var(--color-neutral-1);
   font-weight: 400;
+}
+
+/*** HEADER SECTION ***/
+.header-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem var(--margin-lg);
+}
+
+.menu-dropdown{
+  position: relative;
+}
+
+/*Hide checkbox - this "invisible" checkbox is used to toggle the menu on smaller screens*/
+.menu-checkbox {
+    display: none;
+}
+
+.menu-checkbox:checked ~ .header-nav {
+    display: block;
+}
+
+.menu-checkbox:checked ~ .menu-toggle > .menu-toggle-close {
+    display: block;
+}
+
+.menu-checkbox:checked ~ .menu-toggle > .menu-toggle-open {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+    padding: 2rem;
+    text-align: end;
+}
+
+.header-nav{
+  display: flex;
+  align-items: center;
+}
+
+.header-nav ul{
+  display: flex;
+  list-style: none;
+  margin-right: auto;
+  width: 65%;
+}
+
+.header-link{
+  color: var(--color-primary-2);
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 2rem 1.5rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.header-link:hover{
+  color: var(--color-neutral-1);
+  text-decoration: none;
+}
+
+/*** RE-USABLE CTA-BTN ***/
+.cta-btn{
+  border-radius: 30px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 1rem 3rem;
+  text-decoration: none;
+}
+
+.cta-btn:hover{
+  opacity: .8;
+}
+
+.cta-btn-orange{
+  background-color: var(--color-primary-1);
+  color: white;
+  box-shadow: 0 10px 5px rgba(242, 95, 58, .3);
+}
+
+.cta-btn-white{
+  background-color: white;
+  color: var(--color-primary-1);
+  box-shadow: 0 10px 5px var(--color-neutral-4);
+}
+
+/*** MEDIA QUERIES ***/
+@media only screen and (max-width: 1200px) {
+
+  /*** HEADER SECTION ***/
+    .header-section{
+      padding: 2rem var(--margin-md);
+    }
+}
+
+@media only screen and (max-width: 900px) {
+/*** HEADER SECTION ***/
+
+  .cta-btn-nav{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+/*** HEADER SECTION ***/
+  .header-section{
+    padding: 0 var(--margin-sm);
+  }
+
+  .menu-toggle{
+    display: block;
+  }
+
+  .menu-toggle-close, .cta-btn-nav{
+    display: none;
+  }
+
+  .header-nav{
+    background-image: linear-gradient(to top, rgba(50, 57, 82, .9), transparent);
+    display: none;
+    padding: 3rem;
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden; /*prevent scrolling until menu closed*/
+    z-index: 20;
+  }
+
+  .header-nav ul{
+    background-color: white;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    width: 100%;
+  }
+
+  .header-nav ul > li{
+    margin: 1.2rem;
+  }
+
+  .header-link{
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+  }
+
 
 }
