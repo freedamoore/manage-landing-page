@@ -8,7 +8,7 @@
 
   --margin-sm: 2rem;
   --margin-md: 3rem;
-  --margin-lg: 10rem;
+  --margin-lg: 12rem;
 }
 
 *,
@@ -25,6 +25,10 @@ html{
 }
 
 body {
+  background-image: url('images/bg-tablet-pattern.svg');
+  background-repeat: no-repeat;
+  background-position: right -300px top -300px;
+  background-size: contain;
   font-family: 'Be Vietnam', sans-serif;
   font-size: 1.6rem; /* 16px; */
   color: var(--color-neutral-1);
@@ -117,6 +121,45 @@ body {
   box-shadow: 0 10px 5px var(--color-neutral-4);
 }
 
+/*** INTRO SECTION ***/
+.intro-section{
+  padding: 6rem var(--margin-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intro-section__txt{
+  width: 50%;
+}
+
+.intro-section__txt h1{
+  color: var(--color-primary-2);
+  font-size: 5.6rem;
+  letter-spacing: -2px;
+  line-height: 1.2;
+  margin-bottom: 3rem;
+  margin-right: 2rem;
+}
+
+.intro-section__txt p{
+  margin-bottom: 4.5rem;
+  margin-right: 25rem;
+}
+
+.intro-section__img {
+  width: 50%;
+}
+
+.intro-section__img img{
+  display: block;
+  max-height: 525px;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: right;
+}
+
 /*** MEDIA QUERIES ***/
 @media only screen and (max-width: 1200px) {
 
@@ -124,17 +167,55 @@ body {
     .header-section{
       padding: 2rem var(--margin-md);
     }
+
+  /*** INTRO SECTION ***/
+    .intro-section{
+      padding: 3rem var(--margin-md);
+    }
 }
 
 @media only screen and (max-width: 900px) {
+  body{
+    background-position: right -150px top -150px;
+  }
 /*** HEADER SECTION ***/
-
   .cta-btn-nav{
     display: none;
+  }
+
+/*** INTRO SECTION ***/
+  .intro-section{
+    flex-direction: column;
+  }
+
+  .intro-section__txt{
+    text-align: center;
+    order: 1;
+    width: 100%;
+  }
+
+  .intro-section__txt h1{
+    font-size: 4.2rem;
+    margin-right: 0;
+  }
+
+  .intro-section__txt p{
+    margin-right: 0;
+  }
+
+  .intro-section__img{
+    width: 100%;
+  }
+
+  .intro-section__img img{
+    object-position: center;
   }
 }
 
 @media only screen and (max-width: 600px) {
+  body{
+    background-position: right -50px top -50px;
+  }
 
 /*** HEADER SECTION ***/
   .header-section{
@@ -181,5 +262,8 @@ body {
     text-decoration: none;
   }
 
-
+/*** INTRO SECTION ***/
+  .intro-section{
+    padding: 3rem var(--margin-sm);
+  }
 }
