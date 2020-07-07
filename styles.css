@@ -51,13 +51,13 @@ body {
 .cta-btn-orange{
   background-color: var(--color-primary-1);
   color: white;
-  box-shadow: 0 10px 5px rgba(242, 95, 58, .3);
+  box-shadow: 0 10px 10px rgba(242, 95, 58, .2);
 }
 
 .cta-btn-white{
   background-color: white;
   color: var(--color-primary-1);
-  box-shadow: 0 10px 5px var(--color-neutral-4);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
 }
 
 .sub-heading{
@@ -222,7 +222,22 @@ body {
   grid-column: 2/-1;
 }
 
+/*** TESTIMONIALS SECTION***/
 
+/*** CTA SECTION ***/
+.cta-section{
+  background-color: var(--color-primary-1);
+  background-image: url('images/bg-simplify-section-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem var(--margin-lg);
+}
+.cta-section h1{
+  width: 35%;
+}
 
 /*** MEDIA QUERIES ***/
 @media only screen and (max-width: 1200px) {
@@ -243,6 +258,11 @@ body {
 /*** FEATURES SECTION ***/
   .features-section{
     padding: 6rem var(--margin-md);
+  }
+
+/*** CTA SECTION ***/
+  .cta-section{
+    padding: 5rem var(--margin-md);
   }
 }
 
@@ -332,6 +352,19 @@ body {
   .feature-section__title--txt{
     font-size: 1.8rem;
   }
+
+  /*** CTA SECTION ***/
+  .cta-section{
+    background-image: url('images/bg-simplify-section-mobile.svg');
+    background-size: contain;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .cta-section h1{
+    width: 80%;
+    margin-bottom: 3rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -393,5 +426,4 @@ body {
   .features-section{
     padding: 6rem var(--margin-sm);
   }
-
 }
