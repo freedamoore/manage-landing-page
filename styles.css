@@ -223,6 +223,81 @@ body {
 }
 
 /*** TESTIMONIALS SECTION***/
+.testimonials-section{
+  text-align: center;
+  padding: 5rem 0;
+  margin-bottom: 5rem;
+}
+
+.testimonials-section h2{
+  margin-bottom: 3rem;
+}
+
+.testimonials-carousel{
+  margin: 5rem 0;
+}
+
+.testimonials-carousel__slides{
+  display: flex;
+  justify-content: space-between;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-top: 3rem;/*so that the top of avatar is visible*/
+  padding-bottom: 3rem;
+}
+
+.testimonials-carousel__slide{
+  background-color: var(--color-neutral-4);
+  flex: 0 0 23%;
+  padding: 0 3rem 3rem 3rem;
+}
+
+.testimonials-carousel__slide:not(:last-child){
+  margin-right: 2rem;
+}
+
+.testimonials-carousel__slide img{
+  width: 60px;
+  transform: translateY(-50%);
+}
+
+.testimonials-carousel__slide h4{
+  padding-bottom: 3rem;
+}
+
+.testimonials-carousel__links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 1rem; */
+  visibility: hidden;
+}
+
+.testimonials-carousel__link{
+  background-color: white;
+  border: 2px solid var(--color-primary-1);
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+}
+
+.testimonials-carousel__link:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.testimonials-carousel__link:hover {
+  background-color: var(--color-primary-1);
+}
+
+.testimonials-carousel__link--active {
+  background-color: var(--color-primary-1);
+}
+
+.testimonials-carousel__link a{
+  color: transparent;
+}
 
 /*** CTA SECTION ***/
 .cta-section{
@@ -258,6 +333,11 @@ body {
 /*** FEATURES SECTION ***/
   .features-section{
     padding: 6rem var(--margin-md);
+  }
+
+  /*** TESTIMONIALS SECTION***/
+  .testimonials-section{
+    padding: 5rem 0;
   }
 
 /*** CTA SECTION ***/
@@ -352,7 +432,14 @@ body {
   .feature-section__title--txt{
     font-size: 1.8rem;
   }
+  /*** TESTIMONIALS SECTION ***/
+  .testimonials-carousel__slide{
+    flex: 0 0 100%;
+  }
 
+  .testimonials-carousel__links{
+    visibility: visible;
+  }
   /*** CTA SECTION ***/
   .cta-section{
     background-image: url('images/bg-simplify-section-mobile.svg');
@@ -426,4 +513,10 @@ body {
   .features-section{
     padding: 6rem var(--margin-sm);
   }
+
+  /*** TESTIMONIALS SECTION***/
+  .testimonials-section{
+    padding: 5rem var(--margin-sm);
+  }
+
 }

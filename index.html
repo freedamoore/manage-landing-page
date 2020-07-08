@@ -80,24 +80,44 @@
     </section>
     <section class="testimonials-section">
       <h2 class="sub-heading sub-heading--blue">What they’ve said</h2>
-
-      Anisha Li
-      “Manage has supercharged our team’s workflow. The ability to maintain
-      visibility on larger milestones at all times keeps everyone motivated.”
-
-      Ali Bravo
-      “We have been able to cancel so many other subscriptions since using
-      Manage. There is no more cross-channel confusion and everyone is much
-      more focused.”
-
-      Richard Watts
-      “Manage allows us to provide structure and process. It keeps us organized
-      and focused. I can’t stop recommending them to everyone I talk to!”
-
-      Shanai Gough
-      “Their software allows us to track, manage and collaborate on our projects
-      from anywhere. It keeps the whole team in-sync without being intrusive.”
-
+      <div class="testimonials-carousel">
+        <div class="testimonials-carousel__slides">
+          <div class="testimonials-carousel__slide" id="slide-1">
+            <img src="images/avatar-anisha.png" alt="avatar">
+            <h4>Anisha Li</h4>
+            <p>“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”</p>
+          </div>
+          <div class="testimonials-carousel__slide" id="slide-2">
+            <img src="images/avatar-ali.png" alt="avatar">
+            <h4>Ali Bravo</h4>
+            <p>“We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused.”</p>
+          </div>
+          <div class="testimonials-carousel__slide" id="slide-3">
+            <img src="images/avatar-richard.png" alt="avatar">
+            <h4>Richard Watts</h4>
+            <p>“Manage allows us to provide structure and process. It keeps us organized and focused. I can’t stop recommending them to everyone I talk to!”</p>
+          </div>
+          <div class="testimonials-carousel__slide" id="slide-4">
+            <img src="images/avatar-shanai.png" alt="avatar">
+            <h4>Shanai Gough</h4>
+            <p>“Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
+          </div>
+        </div>
+        <div class="testimonials-carousel__links">
+          <div class="testimonials-carousel__link testimonials-carousel__link--active">
+            <a href="#slide-1">1</a>
+          </div>
+          <div class="testimonials-carousel__link">
+              <a href="#slide-2">2</a>
+          </div>
+          <div class="testimonials-carousel__link">
+            <a href="#slide-3">3</a>
+          </div>
+          <div class="testimonials-carousel__link">
+            <a href="#slide-4">4</a>
+          </div>
+        </div>
+      </div>
       <a href="#" class="cta-btn cta-btn-orange">Get Started</a>
     </section>
     <section class="cta-section">
@@ -123,5 +143,17 @@
       Coded by <a href="https://freedamoore.github.io/">Freeda Moore</a>.
     </div>
   </footer>
+  <!-- testimonials become carousel when in mobile view. This script is to show which link/slide is active -->
+  <script type="text/javascript">
+    const links = document.querySelectorAll('.testimonials-carousel__link');
+    links.forEach(link => {
+      link.addEventListener('click', event => {
+        for (let i = 0; i < links.length; i++) {
+          links[i].classList.remove("testimonials-carousel__link--active")
+        }
+        link.classList.add("testimonials-carousel__link--active");
+      })
+    })
+  </script>
 </body>
 </html>
