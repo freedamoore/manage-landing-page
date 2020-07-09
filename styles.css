@@ -313,7 +313,94 @@ body {
 .cta-section h1{
   width: 35%;
 }
+/*** FOOTER SECTION ***/
+.footer-section{
+  background-color: var(--color-neutral-2);
+  padding: 5rem var(--margin-lg);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
 
+.footer-nav{
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  display: flex;
+}
+
+.footer-nav ul{
+  list-style: none;
+}
+
+.footer-nav ul:not(:last-child){
+  margin-right: 12rem;
+}
+
+.footer-nav li:not(:last-child){
+  margin-bottom: 1.5rem;
+}
+
+.footer-nav a{
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.footer-nav a:hover{
+  color: var(--color-primary-1);
+}
+
+.social {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.social a:not(:last-child){
+  margin-right: 2rem;
+}
+
+.social img:hover{
+  filter: invert(.5) sepia(1) saturate(6) hue-rotate(-30deg);
+  /* filter: url(#999); */
+}
+
+.footer-form{
+  justify-self: right;
+}
+
+.footer-form-email{
+  border: none;
+  border-radius: 30px;
+  padding: 1rem 3rem;
+  margin-right: 1rem;
+}
+
+.footer-form-email:focus{
+  outline: none;
+}
+
+.footer-form-btn{
+  border: 0;
+}
+
+.footer-copyright{
+  font-size: 1.2rem;
+  justify-self: right;
+}
+
+.attribution{
+  grid-column: span 3;
+  justify-self: center;
+  margin-top: 3rem;
+}
+
+.attribution a{
+  color: white;
+}
+
+.attribution a:hover{
+  color: var(--color-primary-1);
+}
 /*** MEDIA QUERIES ***/
 @media only screen and (max-width: 1200px) {
   body{
@@ -342,6 +429,11 @@ body {
 
 /*** CTA SECTION ***/
   .cta-section{
+    padding: 5rem var(--margin-md);
+  }
+
+  /*** FOOTER SECTION ***/
+  .footer-section{
     padding: 5rem var(--margin-md);
   }
 }
@@ -451,6 +543,43 @@ body {
   .cta-section h1{
     width: 80%;
     margin-bottom: 3rem;
+  }
+
+  /*** FOOTER SECTION ***/
+  .footer-section{
+    justify-items: center;
+    grid-row-gap: 4rem;
+  }
+
+  .footer-logo{
+    grid-column: 1 /-1;
+
+  }
+
+  .social{
+    grid-column: 1 /-1;
+    grid-row: 3 / 4;
+  }
+
+  .footer-nav{
+    grid-column: 1 /-1;
+    grid-row: 2 / 3;
+  }
+
+  .footer-form{
+    grid-column: 1 /-1;
+    grid-row: 1 / 2;
+    justify-self: center;
+
+  }
+
+  .footer-copyright{
+    grid-column: 1 /-1;
+    justify-self: center;
+
+  }
+  .attribution{
+
   }
 }
 
