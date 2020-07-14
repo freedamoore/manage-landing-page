@@ -366,6 +366,9 @@ body {
 
 .footer-form{
   justify-self: right;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .footer-form-email{

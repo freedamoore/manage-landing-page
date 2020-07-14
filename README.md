@@ -1,6 +1,10 @@
 ## My solution to the below Frontend Mentor challenge
 
-**WORK IN PROGRESS - WILL UPDATE THIS SECTION WHEN COMPLETED**
+For my solution I've used Semantic HTML, CSS3 and vanilla JS.
+
+CSS Grids and Flexbox in combination with media queries were used for the responsive layout.
+
+On mobile screens the testimonials section turns into a carousel. This was achieved using `flex: 0 0 100%;` in CSS to make one testimonial dominate the screen and then adding a javascript onClick event listener to navigate between testimonials.
 
 # Frontend Mentor - Manage landing page
 
