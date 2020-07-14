@@ -148,7 +148,7 @@
       </ul>
     </nav>
     <form class="footer-form" action="index.html">
-      <input type="email" class="footer-form-email" placeholder="Updates in your inbox…" required>
+      <input type="email" class="footer-form-email" name="email" placeholder="Updates in your inbox…" required>
       <input type="submit" value="Go" class="cta-btn cta-btn-orange footer-form-btn">
     </form>
     <p class="footer-copyright">Copyright 2020. All Rights Reserved</p>
@@ -158,7 +158,7 @@
     </div>
   </footer>
   <!-- testimonials become carousel when in mobile view. This script is to show which link/slide is active -->
-  <script type="text/javascript">
+  <script>
     const links = document.querySelectorAll('.testimonials-carousel__link');
     links.forEach(link => {
       link.addEventListener('click', event => {
